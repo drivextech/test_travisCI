@@ -1,0 +1,32 @@
+os:
+  - osx
+  - linux
+
+compiler:
+  - gcc
+  - clang
+
+language:
+  - c
+  - c++
+
+stages:
+  - compile
+  - build
+  - test
+  - deploy
+  - name: deploy2
+    if: branch = deploy
+
+
+jobs:
+  include:
+    - stage: build
+      - script: cmake . && make
+    - stage: test
+      - script: cd build && ctest
+  exclude:
+    - !
+
+install:
+script:
