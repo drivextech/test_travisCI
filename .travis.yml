@@ -2,6 +2,11 @@ os:
   - osx
   - linux
 
+before_install:
+  - test -n $CC && unset CC
+
+install: make ninja cmake get-deps
+
 compiler:
   - gcc
   - clang
@@ -22,6 +27,6 @@ stages:
 jobs:
   include:
     - stage: build
-      - script: mkdir build && cmake .. && make
+      script: mkdir build && cmake .. && make
     - stage: test
-      - script: cd build && ctest
+      script: cd build && ctest
