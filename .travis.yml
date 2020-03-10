@@ -11,9 +11,10 @@ compiler:
   - gcc
   - clang
 
+language: cpp
 # language:
 #   - c
-#   - c++
+#   - cpp
 
 stages:
   - compile
