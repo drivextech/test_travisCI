@@ -27,6 +27,6 @@ stages:
 jobs:
   include:
     - stage: build
-      script: mkdir build && cmake .. && make
+      script: mkdir build && cd build && cmake .. && make
     - stage: test
       script: cd build && ctest
