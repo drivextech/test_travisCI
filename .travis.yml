@@ -32,10 +32,13 @@ stages:
 
 jobs:
   include:
-    - stage: build
-      language: generic
-      install: skip
-      script:
-        - mkdir build && cd build && cmake .. && make && cd ..
+#     - stage: build
+#       language: generic
+#       install: skip
+#       script: mkdir build && cd build && cmake .. && make && cd ..
     - stage: test
-      script: cd build && ctest && cd ..
+      script:
+        - mkdir build && cd build
+        - cmake .. && make
+        - ctest
+        - cd ..
