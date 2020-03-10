@@ -5,15 +5,15 @@ os:
 before_install:
   - test -n $CC && unset CC
 
-install: make ninja cmake get-deps
+#install: make ninja cmake get-deps
 
 compiler:
   - gcc
   - clang
 
-language:
-  - c
-  - c++
+# language:
+#   - c
+#   - c++
 
 stages:
   - compile
