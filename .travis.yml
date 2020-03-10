@@ -22,12 +22,12 @@ language: cpp
 #   - generic
 
 stages:
-  - compile
+#   - compile
   - build
   - test
-  - deploy
-  - name: deploy2
-    if: branch = deploy
+#   - deploy
+#   - name: deploy2
+#     if: branch = deploy
 
 jobs:
   include:
