@@ -36,6 +36,6 @@ jobs:
       language: generic
       install: skip
       script:
-        - mkdir build && cd build && cmake .. && make
+        - mkdir build && cd build && cmake .. && make && cd ..
     - stage: test
       script: cd build && ctest
