@@ -38,4 +38,4 @@ jobs:
       script:
         - mkdir build && cd build && cmake .. && make && cd ..
     - stage: test
-      script: cd build && ctest
+      script: cd build && ctest && cd ..
