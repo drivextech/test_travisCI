@@ -1,6 +1,7 @@
-os:
-  - osx
-  - linux
+os: linux
+# os:
+#   - osx
+#   - linux
 
 #before_install:
 #  - test -n $CC && unset CC
