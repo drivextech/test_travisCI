@@ -24,7 +24,7 @@ language: cpp
 
 stages:
 #   - compile
-  - build
+#   - build
   - test
 #   - deploy
 #   - name: deploy2
