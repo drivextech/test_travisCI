@@ -22,6 +22,8 @@ language: cpp
 #   - minimal
 #   - generic
 
+script: skip
+
 stages:
 #   - compile
 #   - build
