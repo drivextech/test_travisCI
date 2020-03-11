@@ -7,10 +7,10 @@ os: linux
 #  - test -n $CC && unset CC
 #install: make ninja cmake get-deps
 
-compiler: gcc
-# compiler:
-#   - gcc
-#   - clang
+# compiler: gcc
+compiler:
+  - gcc
+  - clang
 
 language: cpp
 # language:
