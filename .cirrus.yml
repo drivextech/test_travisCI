@@ -25,7 +25,7 @@ env:
 linux_task:
   container:
     matrix:
-      - image: gcc:latest
+      - image: teeks99/gcc-ubuntu:latest
       - image: teeks99/clang-ubuntu:latest
   test_script: mkdir build && cd build && cmake .. && make && ctest
 
