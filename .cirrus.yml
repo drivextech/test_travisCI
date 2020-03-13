@@ -28,7 +28,7 @@ linux_task:
       - image: teeks99/gcc-ubuntu:latest
       - image: teeks99/clang-ubuntu:latest
   test_script:
-    - sudo apt install cmake
+    - apt install cmake
     - mkdir build && cd build && cmake .. && make && ctest
 
 # generic_task:
