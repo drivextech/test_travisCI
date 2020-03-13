@@ -1,0 +1,53 @@
+# container:
+#   image: gcc:latest
+# osx_instance:
+  # image: catalina-xcode
+# windows_container:
+#   image: cirrusci/windowsservercore:2019
+#   image: microsoft-windows-servercore
+#   image: microsoft-windows-base-os-images
+
+env:
+  X: Y
+
+# win_task:
+#   windows_container:
+#       image: cirrusci/windowsservercore:2019
+#   test_script:
+#     - md build && cd build
+#     - cmake .. && msbuild
+
+# osx_task:
+#   osx_instance:
+#     image: catalina-xcode
+#   test_script: mkdir build && cd build && cmake .. && make && ctest
+
+linux_task:
+  container:
+    matrix:
+      - image: gcc:latest
+      - image: teeks99/clang-ubuntu:latest
+  test_script: mkdir build && cd build && cmake .. && make && ctest
+
+# generic_task:
+#   container:
+#     matrix:
+#       - image: gcc:latest
+#       - image: rust:latest
+#       - image: python:latest
+#   echo_script: echo $USER
+#   matrix:
+#     - name: echo
+#       build_script: echo $HOSTNAME
+#     - name: gcc-version
+#       container:
+#         image: gcc:latest
+#       test_script: gcc --version
+#     - name: rust-version
+#       container:
+#         image: rust:latest
+#       test_script: rustc --version
+#     - name: python-version
+#       container:
+#         image: python:latest
+#       test_script: python --version
